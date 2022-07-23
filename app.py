@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    api_key = "d091f65d7cf08229b76e545a51b2f5dd"
+    api_key = "your tmdb key"
     movie_name = request.args.get("movie_name", default="avengers endgame")
     api = "https://api.themoviedb.org/3/search/movie?api_key="+ api_key +"&query="+ movie_name
     movie_info = requests.get(api).json()
@@ -45,7 +45,7 @@ def index():
 
 @app.route("/results", methods=["GET", "POST"])
 def result():
-    api_key = "d091f65d7cf08229b76e545a51b2f5dd"
+    api_key = "your tmdb key"
     movie_id = request.args.get("id1", default="1")
     request2 = "https://api.themoviedb.org/3/movie/"+ str(movie_id) +"/watch/providers?api_key="+ api_key
     streamer_info = requests.get(request2).json()
@@ -76,7 +76,7 @@ def result():
 
 @app.route("/tv", methods=["GET", "POST"])
 def tv():
-    api_key = "d091f65d7cf08229b76e545a51b2f5dd"
+    api_key = "your tmdb key"
     tv_name = request.args.get("tv_name", default="vincenzo")
     api1 = "https://api.themoviedb.org/3/search/tv?api_key="+ api_key +"&query="+ tv_name
     print(api1)
@@ -116,7 +116,7 @@ def tv():
 
 @app.route("/tv_results", methods=["GET", "POST"])
 def result1():
-    api_key = "d091f65d7cf08229b76e545a51b2f5dd"
+    api_key = "your tmdb key"
     tv_id = request.args.get("id1", default="1")
     request2 = "https://api.themoviedb.org/3/tv/"+ str(tv_id) +"/watch/providers?api_key="+ api_key
     streamer_info = requests.get(request2).json()
@@ -150,8 +150,3 @@ def credits():
     return render_template("credits.html")
 
 
-
-
-# print(iso)
-# print(request2)
-# print(provider)
