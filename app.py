@@ -149,4 +149,3 @@ def result1():
 def credits():
     return render_template("credits.html")
 
-
