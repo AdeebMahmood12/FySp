@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def index():
     api_key = "your tmdb key"
-    movie_name = request.args.get("movie_name", default="avengers endgame")
+    movie_name = request.args.get("movie_name", default="bcnrSIxJxi") #<- Random Strings
     api = "https://api.themoviedb.org/3/search/movie?api_key="+ api_key +"&query="+ movie_name
     movie_info = requests.get(api).json()
     posters = []
@@ -77,7 +77,7 @@ def result():
 @app.route("/tv", methods=["GET", "POST"])
 def tv():
     api_key = "your tmdb key"
-    tv_name = request.args.get("tv_name", default="vincenzo")
+    tv_name = request.args.get("tv_name", default="bcnrSIxJxi") #<- Random Strings
     api1 = "https://api.themoviedb.org/3/search/tv?api_key="+ api_key +"&query="+ tv_name
     print(api1)
     tv_info = requests.get(api1).json()
