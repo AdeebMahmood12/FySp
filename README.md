@@ -31,8 +31,5 @@
 # Reason behind making FySp
 #### I made FySp because, I always found it a hassle to find out which streaming platform a certain movie was on.. There were times, when all of a sudden I decided to watch a movie but lost all the mood when I kept on looking for which platform that was on. I might not have lost the mood if I had all the 3 popular platform's subscriptions, I only have Netflix and once I dont find a certain movie/tv show there, I need to go on a voyage on finding which one it is on and then sign up for that particular platform.
 
-# Want use FySp on your device??
-#### Just download the repository, open `app.py` and swap `"your tmdb key"` with your TMDb Api token
-
 # Disclaimer
 #### This site uses the ***TMDB API*** but **is not endorsed or certified** by [TMDB](https://www.themoviedb.org/).
